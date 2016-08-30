@@ -56,5 +56,6 @@ include "inc/load_bookmarks_html.php";
 <script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/slidedown.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/beforeunload.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/analytics.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

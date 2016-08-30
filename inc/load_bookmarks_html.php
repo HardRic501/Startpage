@@ -39,6 +39,8 @@ function loadBookmarksHtml($category)
 			$color = "AC3D31";
 		} elseif ($title=="STIHL B2B") {
 			$color = "F37A1F";
+		} elseif ($title=="YOUTUBE") {
+			$color ="CC181E";
 		}
 
 		echo "<a style='border-bottom: .5rem solid #$color' href='$url' target='_blank'>$title</a>";

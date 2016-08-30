@@ -105,6 +105,7 @@ ul, li {
 	margin: 0rem;
 	margin-bottom: 1rem;
 	padding: 0rem;
+	padding-bottom: 1rem;
 	font-family: "Gotham Rounded Book";
 	font-size: 1rem;
 	background: #CFD8DC;
@@ -187,7 +188,7 @@ ul, li {
 	box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.5);
 }
 
-@media (max-width: 530px) {
+@media (max-width: 600px) and  (orientation: portrait) {
 	.header h3 {
 		display: none;
 	}
