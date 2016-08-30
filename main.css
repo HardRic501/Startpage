@@ -1,43 +1,229 @@
 /***********************************************************************************************************************
 MOBILE
 ***********************************************************************************************************************/
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Gotham Rounded Medium";
+	src: url(gotham_rounded/GothamRounded-Medium.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "Gotham Rounded Bold";
+	src: url(gotham_rounded/GothamRounded-Bold.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "Gotham Rounded Book";
+	src: url(gotham_rounded/GothamRounded-Book.otf) format("opentype");
+}
+
+@font-face {
+	font-family: "Gotham Rounded Light";
+	src: url(gotham_rounded/GothamRounded-Light.otf) format("opentype");
+}
+
 img {
 	max-width: 100%;
 	display: block;
 }
 
+body {
+	background: #ECEFF1;
+	font-family: "Gotham Rounded Book", sans-serif;
+
+}
+
+h1 {
+	font-size: 2rem;
+	margin: 0;
+	padding: 0;
+	font-family: 'Gotham Rounded Bold', sans-serif;
+	font-weight: lighter;
+}
+
+h2 {
+	margin-left: 0.5rem;
+	font-size: 1.5rem;
+	font-family: "Gotham Rounded Bold", sans-serif;
+
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+
+}
+
+.header h1 {
+
+	display: inline-block;
+}
+
+.header h3 {
+	margin-top: 0.5rem;
+	display: inline-block;
+	float: right;
+}
+
 .container {
+	margin: 0;
+	padding: 0;
+
 	display: flex;
 	/*max-width: 100%;*/
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: flex-start;
 }
 
 .header {
-	background: purple;
+	background: #263238;
+	box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.33);
+	color: #ECEFF1;
+	margin-bottom: 1rem;
+	padding: 1rem;
 	flex: 0 1 100%;
+
+	display: none;
+
 }
 
 .category {
-	background: lightgrey;
+	margin: 0rem;
+	margin-bottom: 1rem;
+	padding: 0rem;
+	font-family: "Gotham Rounded Book";
+	font-size: 1rem;
+	background: #CFD8DC;
+	box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.33);
 	flex: 0 1 100%;
+
+	display: none;
 }
 
-/***********************************************************************************************************************
-TABLET
-***********************************************************************************************************************/
-@media (min-width: 800px) {
-	.category {
-		flex: 0 1 50%;
+.link-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+
+@keyframes swing
+{
+	15%
+	{
+		transform: translateX(4px);
+	}
+	30%
+	{
+
+		transform: translateX(-4px);
+	}
+	50%
+	{
+
+		transform: translateX(2px);
+	}
+	65%
+	{
+
+		transform: translateX(-2px);
+	}
+	80%
+	{
+
+		transform: translateX(1px);
+	}
+	100%
+	{
+
+		transform: translateX(0);
 	}
 }
+
+.link-list a {
+
+	margin: 0.5rem;
+	padding: 2rem 0;
+	border-radius: 4px;
+	flex: 0 1 132px;
+	width: 132px;
+	text-align: center;
+	/*min-height: 70px;*/
+	font-family: "Gotham Rounded Book";
+	box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.33);
+	background: #f9f9f9;
+	color: #263238;
+	text-decoration: none;
+
+	transition: all 0.2s ease;
+
+}
+
+.linklist a:visited {
+	color: #263238;
+}
+
+.link-list a:hover {
+	animation: swing 1s ease;
+	animation-iteration-count: 1;
+}
+
+.link-list a:active {
+	transform: scale(.95);
+	box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.5);
+}
+
+@media (max-width: 530px) {
+	.header h3 {
+		display: none;
+	}
+
+	.header {
+		text-align: center;
+	}
+
+    .category {
+	    text-align: center;
+    }
+}
+
 
 /***********************************************************************************************************************
 DESKTOP
 ***********************************************************************************************************************/
-@media (min-width: 1000px) {
-	.category {
-		flex: 0 1 500px;
+@media (min-width: 1200px) {
+	.container {
+		width: 2700px;
 	}
+
+	.category {
+		flex: 0 1 835px;
+
+		margin: 1rem;
+		padding: 1rem;
+		border-radius: 4px;
+	}
+
+	.link-list a {
+		font-size: 1.2rem;
+		flex: 0 1 170px;
+		width: 170px;
+	}
+
+
+
 }
